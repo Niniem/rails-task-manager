@@ -1,0 +1,14 @@
+<h1><%= @tasks.title %></h1>
+
+<div> <button class = "btn btn-outline-secondary" type="button">
+ <%= link_to "Edit this task", edit_task_path %> </button>
+</div>
+<p><%= @tasks.details %></p>
+<div class="form-check2">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+<span><%= @tasks.completed = "This task is completed" %></span>
+  </label>
+</div>
+<%= link_to "retourner au menu", tasks_path %>
+

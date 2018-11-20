@@ -1,0 +1,17 @@
+<h1>My task</h1>
+<% @tasks.each do |task| %>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+  <%= link_to task.title, task_path(task) %>
+</label>
+</div>
+  <p>  🗑
+    <%= link_to "Delete", task_path(task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+  <% end %>
+   </p>
+</div>
+
+<%= link_to "Add task", tasks_new_path %>
